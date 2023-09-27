@@ -1,0 +1,237 @@
+/* --------------------------------------------------------------------------------------
+|	AUTHOR 		: Karthik. N                                                    |
+|	COMPANY		: Leiten Technologies Private Ltd.,                                    |
+|	LOCATION	: Chennai, Tamil Nadu, India.                                   |
+|	DESCRIPTION	: This App is designed & developed by Leiten Technologies (P) Ltd. |
+|                         Contents are Subject to copyright. If you want to create      |
+|                         websites and web apps mailto:info@leitenindia.com             |
+----------------------------------------------------------------------------------------- */
+/* ------------------------------------ COMMON CSS STARTS -------------------------------- */
+@font-face{
+    font-family:'OpenSansReg';
+    src:url('../fonts/opensans-regular.woff2') format("woff2"),
+        url('../fonts/opensans-regular.woff') format("woff");
+    font-weight:400;
+    font-style:normal;
+	font-display:swap;
+}
+@font-face{
+    font-family:'OpenSansBold';
+    src:url('../fonts/opensans-bold.woff2') format("woff2"),
+        url('../fonts/opensans-bold.woff') format("woff");
+    font-weight:400;
+    font-style:normal;
+	font-display:swap;
+}
+@font-face{
+    font-family:'OpenSansSB';
+    src:url('../fonts/opensans-sb.woff2') format("woff2"),
+        url('../fonts/opensans-sb.woff') format("woff");
+    font-weight:400;
+    font-style:normal;
+	font-display:swap;
+}
+
+.br-5{-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px}
+
+*{margin:0; padding:0; font-family:OpenSansReg, Arial, Helvetica, sans-serif; font-size:13px; color:#333; white-space:normal;outline:none;}
+.widget-filter > a, .widget-filter .filter-container > a,.action-btn a,.settings-trigger,.workflow-title,.file-upload-wrapper:after{text-align:center;}
+.p-datepicker table th,.p-dialog .p-dialog-footer{text-align:center !important;}
+.txt-right,.dashboard-stats.white,.dashboard-stats.card,.invoice-list .editable .qty .p-inputtext{text-align:right}
+.txt-left,.multiselect-parent .btn,.filter-container.workflow-filter .p-dropdown{text-align:left;}
+.page-search{text-align:left !important;}
+
+.wrapper,.wrapper *{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
+.bg-shadow{box-shadow:0 0 12px 0rem rgb(62 73 84 / 18%);}
+.inner-page-container .white,.preview-container,.custom-upload{box-shadow:0 1px 15px 1px rgb(69 65 78 / 5%);}
+.p-inputtext:enabled:focus{box-shadow:none;}
+
+ul,li{list-style:none; margin:0;}
+a,a:active,a:hover,a:focus,img,input,textarea,button,button:focus{outline:0 none; text-decoration:none;}
+a, a:hover,.table tbody tr > td,.p-toast-message-text{word-break:break-word;}
+select:focus,.hdr-search input:focus{outline:0 none}
+table{border-collapse:collapse; vertical-align:top; width:100%}
+input,button{overflow:visible}
+button,input[type="submit"],.attachment-lists a .close{cursor:pointer}
+strong,b,b i{font-size:inherit; color:inherit; font-weight:400}
+a{cursor:pointer;}
+
+.apps-left,.apps-center,header,.preview-container{position:fixed;}
+.p-datatable .p-datatable-thead > tr > th.p-sortable-column{position:relative;}
+.p-datatable .p-sortable-column .p-sortable-column-icon{position:absolute;}
+
+.apps-left{z-index:5;}
+.apps-center{z-index:4;}
+
+.apps-left,.apps-center,.preview-container{top:60px;}
+.p-datatable .p-sortable-column .p-sortable-column-icon{top:8px;}
+
+.preview-container{right:-400px;}
+.preview-container.open,.preview-info .preview-container{right:0;}
+.p-datatable .p-sortable-column .p-sortable-column-icon{right:5px;}
+
+.apps-center{left:60px;}
+
+header{background-color:#0268d8;}
+.apps-logo{background-color:#0258d9;}
+.apps-center{background-color:var(--blue-100);}
+.apps-left .menu-tabs a:hover,.menu-tabs a.select{background-color:#ddd;}
+.visitor-search,.host-search{background-color:#eee;}
+.p-calendar .p-button{background-color:#e9ecef;}
+.p-calendar .p-button:enabled:hover{background-color:#dadddf;}
+.visitor-type>div:hover,.visitor-type>div.select,.search-container .white:hover,.search-container .white.select,.login-right{background-color:#c4e0ff;}
+.preview-container .widget-ftr{background-color:#b9daff;}
+.preview-container{background-color:#d8ebff;}
+.p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th{background-color:#e9f4ff;}
+.p-datatable .p-datatable-header{background-color:#f5f5f5;}
+.apps-bg{background-color:#ebeef6;}
+.white,.sidebar,.main-menu .p-panelmenu .p-panelmenu-header > a.select,.main-menu .p-panelmenu .p-panelmenu-header > a.select:hover,.custom-upload .p-button.p-fileupload-choose,.login-left{background-color:#fff;}
+.hdr-search-input{background-color:rgba(255,255,255,.09);}
+
+.hdr-search-input .p-inputtext,.main-menu .p-menu,.main-menu .p-panelmenu .p-panelmenu-header > a{background-color:transparent;}
+
+.apps-left .menu-tabs a{border-radius:100%;}
+.hdr-search-input,.visitor-search,.host-search,.p-button.p-button-icon-only.visitor-add{border-radius:40px;}
+.p-inputswitch .p-inputswitch-slider,.p-inputswitch .p-inputswitch-slider:before{border-radius:30px;}
+.inner-page-container .white,.visitor-type>div,.custom-upload{border-radius:5px;}
+.main-menu .p-panelmenu .p-panelmenu-header > a{border-radius:0;}
+
+.p-calendar .p-button,.p-calendar .p-button:enabled:hover{border:1px solid #ced4da;}
+.visitor-type>div,.visitor-type>div:hover,.visitor-type>div.select{border:1px solid #fff;}
+.preview-final:not(.preview-right .preview-final){border:1px solid #ddd;}
+.p-datatable .p-datatable-header,.p-datatable .p-datatable-thead > tr > th,.p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th,.p-datatable .p-datatable-tbody > tr > td,.p-datatable.p-datatable-gridlines .p-paginator-bottom{border-color:#afc3ec;}
+
+.main-menu h5{border-bottom:1px solid #aec2e3;}
+.sub-title{border-bottom:1px solid #ddd;}
+.preview-container .sub-title{border-bottom:1px solid #c3d3e4;}
+
+.hdr-search-input .p-inputtext,.main-menu .p-menu,.main-menu .p-panelmenu .p-panelmenu-header > a,.visitor-search,.host-search,.custom-upload .p-button.p-fileupload-choose{border:0;}
+
+header,.menu-tabs .p-menu,.host-search,.p-password .p-inputtext{width:100%;}
+.preview-left{width:calc(100% - 280px);}
+.visitor-search{width:calc(100% - 60px);}
+.preview-right,.preview-container{width:280px;}
+.hdr-search{width:270px;}
+.apps-center{width:200px;}
+.visitor-type>div,.custom-upload,.custom-upload .p-button.p-fileupload-choose{width:120px;}
+.apps-logo,.apps-left{width:60px;}
+.p-button.p-button-icon-only.visitor-add{width:40px;}
+.action-btn .p-button,.action-btn .p-button.p-button-icon-only{width:24px;}
+
+.login-page,.login-page > div{height:100vh;}
+.apps-left,.apps-center,.preview-container{height:100%;}
+.visitor-type>div,.custom-upload,.custom-upload .p-button.p-fileupload-choose{height:130px;}
+header,.apps-logo{height:60px;}
+.hdr-search-input,.hdr-login img,.visitor-search,.p-button.p-button-icon-only.visitor-add,.host-search{height:40px;}
+.p-paginator .p-dropdown{height:30px;}
+.action-btn .p-button,.action-btn .p-button.p-button-icon-only{height:24px;}
+
+.apps-bg{overflow:hidden;}
+.scroll-y{overflow-x:hidden;}
+.scroll-y{overflow-y:auto;}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar{width:8px;} 
+::-webkit-scrollbar-track,::-webkit-scrollbar-thumb{-webkit-border-radius:8px;border-radius:8px;}
+::-webkit-scrollbar-track{background-color:#ebebeb;}
+::-webkit-scrollbar-thumb{background:#6d6d6d;}
+
+.appointment-container{margin:auto;}
+.visitor-type>div{margin:5px 10px}
+.visitor-type>div img{margin:12px 15px}
+
+.login-container .grid{margin-top:15px;}
+.login-container .p-button{margin-top:10px;}
+
+.visitor-search{margin-right:10px;}
+.page-title .action-btn{margin-right:15px;}
+.hdr-login img{margin-right:5px;}
+
+h1,.inner-page-container .white,hr{margin-bottom:15px;}
+.menu-tabs a,.preview-final .form-value,.preview-right .preview-final .sub-title{margin-bottom:10px;}
+.main-menu h5,.normal-table label.form-label,.login-container label.form-label{margin-bottom:5px;}
+.p-panelmenu .p-panelmenu-panel,.inner-page-container .search-container .white,.preview-final .form-value:last-child{margin-bottom:0;}
+
+.widget-ftr .p-button{margin-left:10px;}
+.action-btn .p-button,.action-btn .p-button.p-button-icon-only{margin-left:5px;}
+
+.login-container{padding:30px 100px;}
+.p020,.visitor-search{padding:0 20px;}
+.p015{padding:0 15px;}
+.p20,.inner-page-container{padding:20px}
+.p15,.main-menu,.preview-container .widget-ftr{padding:15px;}
+.p-menu .p-menuitem-link,.main-menu .p-panelmenu .p-panelmenu-header > a,.search-container .widget-body{padding:10px 12px;}
+.p10,.apps-left .menu-tabs,.apps-left .menu-tabs a,.widget-body,.visitor-table td{padding:10px;}
+.sub-title{padding:10px 10px 0;}
+.apps-logo{padding:6px 0;}
+.p-datatable .p-datatable-header{padding:5px 10px;}
+.p-datatable .p-datatable-thead > tr > th,.p-datatable.p-datatable-gridlines .p-datatable-tbody > tr > td{padding:5px 8px;}
+.p5,.widget-ftr{padding:5px;}
+.action-btn .p-button,.p-button.p-button-icon-only{padding:0 3px;}
+.login-right{padding:0;}
+
+.page-container{padding-top:60px;}
+
+.p-datatable .p-datatable-thead > tr > th.p-sortable-column{padding-right:20px;}
+.form-container{padding-right:10px;}
+.inner-page-container{padding-right:5px;}
+
+.main-menu h5{padding-bottom:5px;}
+
+.page-container{padding-left:60px;}
+
+.hdr-search-input{line-height:40px;}
+.action-btn .p-button,.action-btn .p-button.p-button-icon-only,.visitor-name,.visitor-company{line-height:24px;}
+.p-paginator .p-dropdown{line-height:12px;}
+
+.d-block,.normal-table label.form-label,.menu-tabs-container.select{display:block;}
+.d-inline-block{display:inline-block !important;}
+a,.login-container label.form-label{display:inline-block;}
+.visitor-type>div,.normal-table .p-inputswitch{display:flex;}
+.menu-tabs-container,.custom-upload .p-button.p-fileupload-choose svg{display:none;}
+
+.custom-upload .p-button.p-fileupload-choose{word-break:break-word;}
+
+.visitor-type>div{align-items:center;}
+
+.visitor-type>div{flex-direction:column;}
+
+.visitor-type>div,.search-container .white{cursor:pointer;}
+
+.p-inputtext,.p-link{font-family:OpenSansReg !important;}
+.main-menu h5,h1,h2,.visitor-type>div h5,.p-button .p-button-label{font-family:OpenSansBold;}
+.p-datatable .p-datatable-thead > tr > th,.p-datatable .p-datatable-thead > tr > th span{font-family:OpenSansSB;}
+
+.main-menu .p-panelmenu .p-panelmenu-header > a,.p-datepicker table th{font-weight:normal;}
+.p-link{font-weight:normal !important;}
+
+.apps-left .menu-tabs a i{font-size:24px;}
+.p-button.p-button-icon-only.visitor-add .p-button-icon{font-size:20px;}
+.page-title h1,.visitor-table td,.visitor-search{font-size:18px;}
+.sub-title h2{font-size:16px;}
+.visitor-name,.emp-id,.visitor-company,.host-name,.custom-upload .p-button.p-fileupload-choose *,.p-button *{font-size:14px;}
+.main-menu h5{font-size:13px;}
+.p-datatable.p-datatable-gridlines .p-datatable-tbody > tr > td{font-size:12px;;}
+.normal-table label.form-label,.normal-table label.form-label .hlt-txt{font-size:11px;}
+
+.hdr-login-text,.hdr-login i,.p-button:not(.p-calendar .p-button) *{color:#fff;}
+.normal-table label.form-label{color:#666;}
+.emp-id{color:#999;}
+.form-value,.form-value *{color:#000;}
+.visitor-name,.host-name{color:#0168da;}
+.hlt-txt{color:#f00}
+.hdr-search-input ::placeholder,.custom-upload .p-button.p-fileupload-choose .p-button-label{color:#ddd;}
+.apps-left .menu-tabs a,.apps-left .menu-tabs a i,.main-menu .p-panelmenu .p-menuitem-text{color:#333;}
+
+.action-btn .p-button svg *{fill:#fff}
+
+.hdr-search-input *{color:#fff !important;}
+
+.text-start{text-align:left;}
+.text-center,.visitor-type>div{text-align:center;}
+.text-end{text-align:right;}
+
+.main-menu h5,.visitor-type>div h5,.custom-upload .p-button.p-fileupload-choose .p-button-label,.p-button *{text-transform:uppercase;}
+
+.align-top{vertical-align:top;}
+.align-middle{vertical-align:middle;}
